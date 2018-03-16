@@ -1,0 +1,11 @@
+.component {
+	width: 100%;
+	height: 250px;
+	background-color: $quaternary_color;
+
+	&-test {
+		width: 25px;
+		height: 25px;
+		background-color: $red;
+	}
+}
