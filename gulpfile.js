@@ -7,7 +7,6 @@ let brow = require('browser-sync').create();
 let conc = require( 'gulp-concat' );
 let babel = require( 'gulp-babel' );
 let ugly = require( 'gulp-uglify' );
-let clean = require( 'gulp-clean');
 
 // tasks
 // makes all cssfiles go into main.css
@@ -55,6 +54,7 @@ gulp.task('serve', function() {
 
 	gulp.watch(['resources/js/*'], ['js-uglify', brow.reload]);
 	gulp.watch(['resources/scss/*', 'resources/main.scss'], ['css-minify', brow.reload]);
+	gulp.watch(['public/index.php', 'public/views/**/*'], [brow.reload]);
 });
 
 // main task that runs the scripts and serve.

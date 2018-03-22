@@ -1,1 +1,38 @@
-"use strict";console.log("this is the alert from the second file"),console.log("test"),console.log("this comes from the first javascript file"),function(){var e="apple";console.log("Awyeah its an apple!"),"apple"===e?(console.log("function_apple"),document.querySelector(".component-test").style.display="none"):(console.log("function nonapple"),document.querySelector(".component-test").style.display="block")}();
+(function () {
+	console.log('this is the alert from the second file');
+	console.log('alert');
+})();
+
+(function () {
+	console.log('this comes from the first javascript file');
+})();
+(function () {
+
+	let apple = "apple";
+	let pear = "pear";
+
+	if (apple === "pear") {
+		console.log("whut? the pear isnt an apple");
+	}
+	if (apple === "apple") {
+		console.log("Awyeah its an apple!")
+	}
+
+	function testit(apple) {
+		if (apple === "apple") {
+			console.log("function_apple");
+			setTimeout(function() {
+				document.querySelector('.component-test').classList.remove('component--shown');
+				document.querySelector('.component-test').classList.add('component--hidden');
+			},1500);
+		}
+		else {
+			console.log("function nonapple");
+			setTimeout(function() {
+				document.querySelector('.component-test').classList.remove('component--hidden');
+				document.querySelector('.component-test').classList.add('component--shown');
+			},1500);		}
+
+	}
+	testit(apple);
+})();

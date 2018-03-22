@@ -1,0 +1,31 @@
+.tablething {
+	h1 {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	.table {
+		margin: auto;
+		width: 50%;
+		border-collapse: collapse;
+
+		td, th {
+			border: 1px solid $primary_color;
+			padding: 10px;
+		}
+
+		tr:nth-child(even) {
+			background-color: $red;
+		}
+
+		tr:hover {
+			background-color: $secondary_color;
+		}
+
+		th {
+			padding: 12px 10px;
+			text-align: left;
+			background-color: $primary_color;
+			color: white;
+		}
+	}
+}

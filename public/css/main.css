@@ -1,1 +1,89 @@
-*{margin:0;color:#00f}.nav{width:100%;height:50px;background-color:#000;opacity:.75}.component{width:100%;height:250px;background-color:#bbbfff}.component-test{width:25px;height:25px;background-color:#cc1039}
+* {
+  margin: 0;
+  font-family: "Calibri", sans-serif; }
+
+body {
+  background-color: #BBBFFF; }
+
+.nav {
+  width: 100%;
+  background-color: #000000;
+  opacity: .75; }
+  .nav-menu {
+    display: inline-block;
+    list-style-type: none; }
+    .nav-menu-item {
+      display: inline-block;
+      margin: 25px 10px; }
+      .nav-menu-item__link {
+        color: #FFFFFF; }
+
+.component {
+  width: 100%;
+  height: 25px;
+  background-color: #BBBFFF; }
+  .component-test {
+    width: 25px;
+    height: 25px;
+    background-color: #CC1039;
+    opacity: 1; }
+  .component--hidden {
+    transition: opacity 2.0s ease-out;
+    opacity: 0; }
+  .component--shown {
+    transition: opacity 2.0s ease-in;
+    opacity: 1; }
+
+.request h1 {
+  margin: 0 250px 25px; }
+
+.request p {
+  margin: 0 200px 0; }
+
+.request .request-form {
+  color: #000000; }
+  .request .request-form__block {
+    width: 100%; }
+  .request .request-form__label {
+    text-align: right;
+    display: inline-block;
+    width: 200px;
+    margin: 10px; }
+  .request .request-form__input {
+    display: inline-block;
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px; }
+  .request .request-form__radio {
+    margin: 10px; }
+  .request .request-form__checkbox {
+    margin: 10px;
+    border-radius: 5px; }
+  .request .request-form__button {
+    margin: 25px 250px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #AAAAFF;
+    height: 25px; }
+
+.tablething h1 {
+  text-align: center;
+  margin-bottom: 25px; }
+
+.tablething .table {
+  margin: auto;
+  width: 50%;
+  border-collapse: collapse; }
+  .tablething .table td, .tablething .table th {
+    border: 1px solid #000000;
+    padding: 10px; }
+  .tablething .table tr:nth-child(even) {
+    background-color: #CC1039; }
+  .tablething .table tr:hover {
+    background-color: #AAAAFF; }
+  .tablething .table th {
+    padding: 12px 10px;
+    text-align: left;
+    background-color: #000000;
+    color: white; }

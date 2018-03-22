@@ -1,0 +1,112 @@
+#!/usr/bin/env php
+<?php
+
+include_once "autoloader.php";
+
+if(!isset($_SERVER['argv'][1])) {
+echo <<<GOO
+
+	Hello GB user.
+	The following usable actions are:
+	
+	goo/console hello		-	This function only asks if you would like an hello.
+	goo/console test_argv		-	This function tests the given arguments for debugging.
+	goo/console create_db		-	This function creates a given database
+	goo/console create_table	-	This function creates a given table into a given database
+	
+	The functions may be acting up because it is still in progress.
+	thats it :D Have a nice day ;)
+	
+GOO;
+
+exit();
+}
+
+function prompt($message = "Are you sure? [yes/no]", $type = "yn") {
+
+	print $message;
+	flush();
+
+		$confirmation = trim( fgets(STDIN));
+
+		switch($confirmation) {
+			case "yes":
+				return true;
+				break;
+			case "no":
+				return false;
+				break;
+			case !empty($confirmation):
+				return $confirmation;
+				break;
+			case empty($confirmation):
+				return false;
+				break;
+			default:
+				return prompt("please try again".PHP_EOL);
+	}
+}
+
+function hello() {
+
+	$message = prompt("you want a hello? [yes/no]");
+	if($message == true) {
+		echo "Well then, Hello!".PHP_EOL;
+	}
+	if($message == false) {
+		echo "Well then, Fuck you!".PHP_EOL;
+	}
+}
+
+function test_argv() {
+
+	echo "argc:".PHP_EOL;
+	var_dump($_SERVER['argc']);
+	echo PHP_EOL;
+	echo "argv:".PHP_EOL;
+	var_dump($_SERVER['argv']);
+}
+
+function create_db($test = "abc") {
+
+	$message = prompt("Please fill in the name of the Database or cancel by entering nothing?".PHP_EOL);
+	if(!empty($message)) {
+		$db = new Database;
+		$db->create_db($message);
+	}
+	else {
+		echo "You wrote nothing".PHP_EOL;
+	}
+	var_dump($_SERVER['argv']);
+
+}
+
+function create_table() {
+
+	$database = prompt("Please fill in the name of the database".PHP_EOL);
+	if(!empty($database)) {
+		$table = prompt("Please fill in your desired table".PHP_EOL);
+		if(!empty($table)) {
+			$db = new Database;
+			$db->create_table($database, $table);
+			echo "You created table $table in to the database: $database".PHP_EOL;
+		}
+		else {
+			echo "Canceled action, gotta improve thisone".PHP_EOL;
+		}
+	}
+	else {
+		echo "You wrote nothing".PHP_EOL;
+	}
+}
+
+
+
+
+
+
+$parameters = [];
+for($i = 1; $i < $_SERVER['argc']; $i++) {
+	$parameters[] = $_SERVER["argv"][$i];
+}
+call_user_func_array($parameters[0],$parameters);
