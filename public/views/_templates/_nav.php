@@ -10,7 +10,7 @@
 			<a class="nav-menu-item__link" href="?view=requests">REQUESTS</a>
 		</li>
 		<li class="nav-menu-item">
-			<a class="nav-menu-item__link" href="">OTHER LINK</a>
+			<a class="nav-menu-item__link" href="?view=scraper">SCRAPER</a>
 		</li>
 	</ul>
 </nav>
