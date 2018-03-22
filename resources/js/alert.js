@@ -1,4 +1,16 @@
 (function () {
-	console.log('this is the alert from the second file');
-	console.log('alert');
+
+	if(document.querySelector("#scraper")){
+		fetch("scraper.php")
+			.then(function() {
+			document.write(data);
+		})
+			.catch(function() {
+
+			})
+	}
+	else{
+		document.write("no");
+	}
+
 })();

@@ -1,13 +1,11 @@
 (function () {
 
 	let apple = "apple";
-	let pear = "pear";
-
 	if (apple === "pear") {
-		console.log("whut? the pear isnt an apple");
+		console.log("v");
 	}
 	if (apple === "apple") {
-		console.log("Awyeah its an apple!")
+		console.log("c")
 	}
 
 	function testit(apple) {

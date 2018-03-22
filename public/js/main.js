@@ -1,21 +1,31 @@
 (function () {
-	console.log('this is the alert from the second file');
-	console.log('alert');
+
+	if(document.querySelector("#scraper")){
+		fetch("scraper.php")
+			.then(function() {
+			document.write(data);
+		})
+			.catch(function() {
+
+			})
+	}
+	else{
+		document.write("no");
+	}
+
 })();
 
 (function () {
-	console.log('this comes from the first javascript file');
+	console.log('a');
 })();
 (function () {
 
 	let apple = "apple";
-	let pear = "pear";
-
 	if (apple === "pear") {
-		console.log("whut? the pear isnt an apple");
+		console.log("v");
 	}
 	if (apple === "apple") {
-		console.log("Awyeah its an apple!")
+		console.log("c")
 	}
 
 	function testit(apple) {
