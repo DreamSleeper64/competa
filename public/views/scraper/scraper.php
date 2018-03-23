@@ -7,8 +7,8 @@ echo "<pre>";
 //var_dump( $matches);
 var_dump($code);
 echo "</pre>";
-echo '<img src="https://www.jumbo.com' . $matches[ 1 ][ 19 ] . '" />';
-echo '<img src="https://www.jumbo.com' . $matches[ 1 ][ 1 ] . '" />';
+echo '<img src="https://www.jumbo.com' . $matches[ 1 ][ 0 ] . '" />';
+echo '<img src="https://www.jumbo.com' . $matches[ 1 ][ 4 ] . '" />';
 
 //var_dump($code->getElementById('sku-129647STK'));
 ?>

@@ -1,3 +1,4 @@
+<?php $a = true; ?>
 <nav class="nav">
 	<ul class="nav-menu">
 		<li class="nav-menu-item">
@@ -12,5 +13,10 @@
 		<li class="nav-menu-item">
 			<a class="nav-menu-item__link" href="?view=scraper">SCRAPER</a>
 		</li>
+		<?php if(isset($a) && $a == true): ?>
+		<li class="nav-menu-item">
+			<a class="nav-menu-item__link" href="?view=tryout">TRYOUT</a>
+		</li>
+		<?php endif; ?>
 	</ul>
 </nav>
