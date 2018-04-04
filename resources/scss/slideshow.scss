@@ -1,0 +1,110 @@
+.slideshow {
+
+	.hide {
+		-webkit-transition: opacity .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out;
+		-ms-transition: opacity .5s ease-in-out;
+		-o-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+		opacity: 0;
+	}
+
+	.show {
+		-webkit-transition: opacity .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out;
+		-ms-transition: opacity .5s ease-in-out;
+		-o-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+		opacity: 1;
+	}
+
+	.active {
+		background-color: rgba(18, 37, 68, 0.24);
+	}
+
+	&-container {
+		width: 95%;
+		max-height: 500px;
+		margin: auto;
+		background-color: $secondary_color;
+
+	}
+
+	&-block {
+		height: 500px;
+		max-height: 500px;
+		width: 100%;
+		margin-left: 2%;
+
+		&-image {
+			display: inline-block;
+			width: 85%;
+			height: 500px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-clip: border-box;
+		}
+
+		&-button-field {
+			display: inline-block;
+			height: 500px;
+			width: 5%;
+			background-color: rgba(0,0,0,0.5);
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+		}
+
+		&-bolls {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			&__boll {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin: 20px 2.5%;
+				border-radius: 50%;
+				background-color: rgba(32, 24, 99, 0.49);
+
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.3);
+					cursor: pointer;
+				}
+			}
+
+		}
+	}
+
+	&-slide {
+		height: 300px;
+		width: 100%;
+	}
+
+	.slider-button {
+		position: absolute;
+		top: 335px;
+		border: solid black;
+		display: inline-block;
+		border-width: 0 3px 3px 0;
+		height: 25px;
+		width: 25px;
+		padding: 3px;
+
+		&--left {
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+			left: 6.3%;
+		}
+
+		&--right {
+			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			right: 6.8%;
+		}
+	}
+}
